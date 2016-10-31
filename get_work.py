@@ -48,8 +48,8 @@ payload = {
 }
 
 log("payload: \n%s" % payload)
-
 result = requests.get('http://www.mersenne.org/manual_assignment/', params=payload)
+log("url: %s" % result.url)
 
 log("parsing response")
 start = '<!--BEGIN_ASSIGNMENTS_BLOCK-->'
