@@ -1,10 +1,15 @@
 #!/usr/bin/python3
 
+import argparse
 import requests
 import sys
 
+parser = argparse.ArgumentParser()
+parser.add_argument("-f", "--force", help="Get new work even if you already have more than the configured minimum amount", action="store_true")
+args = parser.parse_args()
+
 num_lines = sum(1 for line in open('worktodo.txt'))
-if num_lines > 1000:
+if num_lines > 1000 and not args.force:
 	sys.exit(0)
 
 payload = {
