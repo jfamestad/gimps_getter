@@ -29,7 +29,7 @@ log("using worktodo file: %s" % output)
 log("minimum workunit count: %d" % minimum)
 log("cores: %d" % cores)
 log("num_to_get: %d" % num_to_get)
-log("torktype: %d" % worktype)
+log("worktype: %d" % worktype)
 
 if not os.path.isfile(output):
     open(output, 'w').close()
