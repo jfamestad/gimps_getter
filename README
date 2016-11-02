@@ -1,1 +1,19 @@
-Use this script in a cronjob or some other scheduler to manage your worktodo.txt file with new work from http://www.mersenne.org. 
+$ ./get_work.py -h
+usage: get_work.py [-h] [-f] [-c CORES] [-w WORKUNITS] [-t TYPE] [-m MINIMUM]
+                   [-v] [-o OUTPUT]
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -f, --force           Get new work even if you already have more than the
+                        configured minimum amount
+  -c CORES, --cores CORES
+                        Number of workers to collect work for
+  -w WORKUNITS, --workunits WORKUNITS
+                        Number of workunits to collect work for each core/
+                        worker
+  -t TYPE, --type TYPE  work type identifier id.
+  -m MINIMUM, --minimum MINIMUM
+                        minimum number of workunits in target file
+  -v, --verbose         verbose
+  -o OUTPUT, --output OUTPUT
+                        specify an output file
